@@ -1,0 +1,104 @@
+id: d2b8d7afe25840ff94d891a04b0d5cb3
+annotation_type: Segment
+revision: '00001'
+annotations:
+  17d8cc3d65114728a41c675028c62ad9:
+    span:
+      start: 0
+      end: 98
+    metadata: {}
+  28f14ef8e0d54469b1b676794e8e24d8:
+    span:
+      start: 101
+      end: 202
+    metadata: {}
+  8ce8f943d6a3427abb3eebaff365f8cc:
+    span:
+      start: 205
+      end: 307
+    metadata: {}
+  f8258f317c8a4a12839a71df22350647:
+    span:
+      start: 310
+      end: 410
+    metadata: {}
+  f1e107a8fd944334ac3a6dd31197174e:
+    span:
+      start: 413
+      end: 514
+    metadata: {}
+  7a03950b0fe24570af2e440479ddc691:
+    span:
+      start: 517
+      end: 619
+    metadata: {}
+  a3fd6d1dd08a4cc382deec34f7f1addc:
+    span:
+      start: 622
+      end: 738
+    metadata: {}
+  cea0c6f3f3534b21a46901956c555fa2:
+    span:
+      start: 741
+      end: 847
+    metadata: {}
+  4a084e488b0d44c4b22226c7cfea88ea:
+    span:
+      start: 850
+      end: 952
+    metadata: {}
+  9f20d1bd2b1e429c9b122927a8be2386:
+    span:
+      start: 955
+      end: 1061
+    metadata: {}
+  5aa8f24938fe468497539469cd8f5432:
+    span:
+      start: 1064
+      end: 1172
+    metadata: {}
+  6b677d54247d4c5bb0274745ca9e9762:
+    span:
+      start: 1175
+      end: 1270
+    metadata: {}
+  4a61c515220a4e80ae18caf96a3f6d55:
+    span:
+      start: 1273
+      end: 1376
+    metadata: {}
+  17b0028939d14f9991988070675aee67:
+    span:
+      start: 1379
+      end: 1476
+    metadata: {}
+  28645e923d3c436d9984dc0f36b09943:
+    span:
+      start: 1479
+      end: 1577
+    metadata: {}
+  bbdedf8d3fc9472cab3e04de6dfa8ea7:
+    span:
+      start: 1580
+      end: 1682
+    metadata: {}
+  88bd21d266324ba7bed357891a53a297:
+    span:
+      start: 1685
+      end: 1796
+    metadata: {}
+  28a24c58ccd94f9cb7a72480ce126e94:
+    span:
+      start: 1799
+      end: 1897
+    metadata: {}
+  d45802976181425c89e8012e7c1c20ea:
+    span:
+      start: 1900
+      end: 2006
+    metadata: {}
+  56751182afef48c79a7d67bab73d164d:
+    span:
+      start: 2009
+      end: 2113
+    metadata: {}

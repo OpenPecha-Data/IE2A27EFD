@@ -1,0 +1,963 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=77' accesskey='1'>Aśvaghoṣa: Buddhacarita</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Aśvaghoṣa: Buddhacarita<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_77[2090]" value="2090" id="lancheckbox" checked >Sanskrit: Eng: Johnston (1978), Eng: Cowell (1893, 1927), Weller (1953)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_77[1124]" value="1124" id="lancheckbox" checked >Chinese: Chi: 曇無讖, T.192</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_77[5714]" value="5714" id="lancheckbox" checked >Tibetan: Tib: Sa dbaṇ bzaṇ po and Blo gros rgyal po, Tg, skyes rabs, ge</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_77[1877]" value="1877" id="lancheckbox" checked >English: Eng: Beal (1883)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_77[1128]" value="1128" id="lancheckbox" checked >English: Eng: Cowell (1893, 1927), Eng: Johnston (1978)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="77">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="77">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='77'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v77">Search in Aśvaghoṣa: Buddhacarita</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=77'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=77'>Aśvaghoṣa: Buddhacarita</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=77" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="13170.Title|13171.Preface|13172.Chapter1:Bhagavatprasūti|13178.Chapter2:Antaḥpuravihāra|13182.Chapter3:Saṃvegotpatti|13187.Chapter4:Strīvighātana|13194.Chapter5:Abhiniṣkramaṇa|13200.Chapter6:Chandakanivartana|13205.Chapter7:Tapovanapraveśa|13209.Chapter8:Antaḥpuravilāpa|13215.Chapter9:Kumārānveṣaṇa|13221.Chapter10:Śreṇyābhigamana|13225.Chapter11:Kāmavigarhaṇa|13230.Chapter12:Arāḍadarśana|13238.Chapter13:Māravijaya|13243.Chapter14:Englightenment|13251.Chapter15:TurningtheWheeloftheLaw|13255.Chapter16:ManyConversions|13261.Chapter17:Conversion(pravrajyā)oftheGreatDisciples|13265.Chapter18:TheInstructionofAnāthapiṇḍada|13271.Chapter19:TheMeetingofFatherandSon|13275.Chapter20:AcceptanceofJetavana|13279.Chapter21:Progress(srotas)oftheMission|13284.Chapter22:TheVisittoAmrapāli'sGrove|13288.Chapter23:FixingtheFactorsofBodilyLife|13293.Chapter24:CompassionfortheLicchavis|13298.Chapter25:TheJourneytoNirvāṇa|13304.Chapter26:TheMahāparinirvāṇa|13311.Chapter27:EulogyofNirvāṇa|13317.Chapter28:TheDivisionoftheRelics|13322.Colophon|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13170.Title" border=0 hspace=2><a id="href_13170.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244532&level=1&cid=146406" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13171.Preface" border=0 hspace=2><a id="href_13171.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244533&level=1&cid=146407" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13172.Chapter1:Bhagavatprasūti','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13172.Chapter1:Bhagavatprasūti" border=0 hspace=2><a id="href_13172.Chapter1:Bhagavatprasūti" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244534&level=1&cid=146408" class="ajax_tree0">Chapter 1: Bhagavatprasūti
+</td></tr></table>
+<div style="display:none;"  id="div_13172.Chapter1:Bhagavatprasūti">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13173.Verses1-20" border=0 hspace=2><a id="href_13173.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244536&level=2&cid=146410" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13174.Verses21-40" border=0 hspace=2><a id="href_13174.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244559&level=2&cid=146433" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13175.Verses41-60" border=0 hspace=2><a id="href_13175.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244581&level=2&cid=146455" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13176.Verses61-80" border=0 hspace=2><a id="href_13176.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244601&level=2&cid=146475" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13177.Verses81-89" border=0 hspace=2><a id="href_13177.Verses81-89" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244621&level=2&cid=146495" class="ajax_tree1">Verses 81-89
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13178.Chapter2:Antaḥpuravihāra','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13178.Chapter2:Antaḥpuravihāra" border=0 hspace=2><a id="href_13178.Chapter2:Antaḥpuravihāra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244631&level=1&cid=146505" class="ajax_tree0">Chapter 2: Antaḥpuravihāra
+</td></tr></table>
+<div style="display:none;"  id="div_13178.Chapter2:Antaḥpuravihāra">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13179.Verses1-20" border=0 hspace=2><a id="href_13179.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244632&level=2&cid=146506" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13180.Verses21-40" border=0 hspace=2><a id="href_13180.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244652&level=2&cid=146526" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13181.Verses41-56" border=0 hspace=2><a id="href_13181.Verses41-56" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244672&level=2&cid=146546" class="ajax_tree1">Verses 41-56
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13182.Chapter3:Saṃvegotpatti','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13182.Chapter3:Saṃvegotpatti" border=0 hspace=2><a id="href_13182.Chapter3:Saṃvegotpatti" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244689&level=1&cid=146563" class="ajax_tree0">Chapter 3: Saṃvegotpatti
+</td></tr></table>
+<div style="display:none;"  id="div_13182.Chapter3:Saṃvegotpatti">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13183.Verses1-20" border=0 hspace=2><a id="href_13183.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244690&level=2&cid=146564" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13184.Verses21-40" border=0 hspace=2><a id="href_13184.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244710&level=2&cid=146584" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13185.Verses41-60" border=0 hspace=2><a id="href_13185.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244730&level=2&cid=146604" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13186.Verses61-65" border=0 hspace=2><a id="href_13186.Verses61-65" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244750&level=2&cid=146624" class="ajax_tree1">Verses 61-65
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13187.Chapter4:Strīvighātana','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13187.Chapter4:Strīvighātana" border=0 hspace=2><a id="href_13187.Chapter4:Strīvighātana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244756&level=1&cid=146630" class="ajax_tree0">Chapter 4: Strīvighātana
+</td></tr></table>
+<div style="display:none;"  id="div_13187.Chapter4:Strīvighātana">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13188.Verses1-20" border=0 hspace=2><a id="href_13188.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244757&level=2&cid=146631" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13189.Verses21-40" border=0 hspace=2><a id="href_13189.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244777&level=2&cid=146651" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13190.Verses41-60" border=0 hspace=2><a id="href_13190.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244797&level=2&cid=146671" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13191.Verses61-80" border=0 hspace=2><a id="href_13191.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244817&level=2&cid=146691" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13192.Verses81-100" border=0 hspace=2><a id="href_13192.Verses81-100" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244837&level=2&cid=146711" class="ajax_tree1">Verses 81-100
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13193.Verses101-103" border=0 hspace=2><a id="href_13193.Verses101-103" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244857&level=2&cid=146731" class="ajax_tree1">Verses 101-103
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13194.Chapter5:Abhiniṣkramaṇa','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13194.Chapter5:Abhiniṣkramaṇa" border=0 hspace=2><a id="href_13194.Chapter5:Abhiniṣkramaṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244861&level=1&cid=146735" class="ajax_tree0">Chapter 5: Abhiniṣkramaṇa
+</td></tr></table>
+<div style="display:none;"  id="div_13194.Chapter5:Abhiniṣkramaṇa">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13195.Verses1-20" border=0 hspace=2><a id="href_13195.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244862&level=2&cid=146736" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13196.Verses21-40" border=0 hspace=2><a id="href_13196.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244882&level=2&cid=146756" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13197.Verses41-60" border=0 hspace=2><a id="href_13197.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244902&level=2&cid=146776" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13198.Verses61-80" border=0 hspace=2><a id="href_13198.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244922&level=2&cid=146796" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13199.Verses81-87" border=0 hspace=2><a id="href_13199.Verses81-87" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244942&level=2&cid=146816" class="ajax_tree1">Verses 81-87
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13200.Chapter6:Chandakanivartana','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13200.Chapter6:Chandakanivartana" border=0 hspace=2><a id="href_13200.Chapter6:Chandakanivartana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244950&level=1&cid=146824" class="ajax_tree0">Chapter 6: Chandakanivartana
+</td></tr></table>
+<div style="display:none;"  id="div_13200.Chapter6:Chandakanivartana">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13201.Verses1-20" border=0 hspace=2><a id="href_13201.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244951&level=2&cid=146825" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13202.Verses21-40" border=0 hspace=2><a id="href_13202.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244971&level=2&cid=146845" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13203.Verses41-60" border=0 hspace=2><a id="href_13203.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=244991&level=2&cid=146865" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13204.Verses61-68" border=0 hspace=2><a id="href_13204.Verses61-68" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245011&level=2&cid=146885" class="ajax_tree1">Verses 61-68
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13205.Chapter7:Tapovanapraveśa','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13205.Chapter7:Tapovanapraveśa" border=0 hspace=2><a id="href_13205.Chapter7:Tapovanapraveśa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245020&level=1&cid=146894" class="ajax_tree0">Chapter 7: Tapovanapraveśa
+</td></tr></table>
+<div style="display:none;"  id="div_13205.Chapter7:Tapovanapraveśa">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13206.Verses1-20" border=0 hspace=2><a id="href_13206.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245021&level=2&cid=146895" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13207.Verses21-40" border=0 hspace=2><a id="href_13207.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245041&level=2&cid=146915" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13208.Verses41-58" border=0 hspace=2><a id="href_13208.Verses41-58" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245061&level=2&cid=146935" class="ajax_tree1">Verses 41-58
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13209.Chapter8:Antaḥpuravilāpa','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13209.Chapter8:Antaḥpuravilāpa" border=0 hspace=2><a id="href_13209.Chapter8:Antaḥpuravilāpa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245080&level=1&cid=146954" class="ajax_tree0">Chapter 8: Antaḥpuravilāpa
+</td></tr></table>
+<div style="display:none;"  id="div_13209.Chapter8:Antaḥpuravilāpa">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13210.Verses1-20" border=0 hspace=2><a id="href_13210.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245081&level=2&cid=146955" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13211.Verses21-40" border=0 hspace=2><a id="href_13211.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245101&level=2&cid=146975" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13212.Verses41-60" border=0 hspace=2><a id="href_13212.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245121&level=2&cid=146995" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13213.Verses61-80" border=0 hspace=2><a id="href_13213.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245141&level=2&cid=147015" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13214.Verses81-87" border=0 hspace=2><a id="href_13214.Verses81-87" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245161&level=2&cid=147035" class="ajax_tree1">Verses 81-87
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13215.Chapter9:Kumārānveṣaṇa','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13215.Chapter9:Kumārānveṣaṇa" border=0 hspace=2><a id="href_13215.Chapter9:Kumārānveṣaṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245169&level=1&cid=147043" class="ajax_tree0">Chapter 9: Kumārānveṣaṇa
+</td></tr></table>
+<div style="display:none;"  id="div_13215.Chapter9:Kumārānveṣaṇa">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13216.Verses1-20" border=0 hspace=2><a id="href_13216.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245170&level=2&cid=147044" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13217.Verses21-40" border=0 hspace=2><a id="href_13217.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245190&level=2&cid=147064" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13218.Verses41-60" border=0 hspace=2><a id="href_13218.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245210&level=2&cid=147084" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13219.Verses61-80" border=0 hspace=2><a id="href_13219.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245230&level=2&cid=147104" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13220.Verses81-82" border=0 hspace=2><a id="href_13220.Verses81-82" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245250&level=2&cid=147124" class="ajax_tree1">Verses 81-82
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13221.Chapter10:Śreṇyābhigamana','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13221.Chapter10:Śreṇyābhigamana" border=0 hspace=2><a id="href_13221.Chapter10:Śreṇyābhigamana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245253&level=1&cid=147127" class="ajax_tree0">Chapter 10: Śreṇyābhigamana
+</td></tr></table>
+<div style="display:none;"  id="div_13221.Chapter10:Śreṇyābhigamana">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13222.Verses1-20" border=0 hspace=2><a id="href_13222.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245254&level=2&cid=147128" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13223.Verses21-40" border=0 hspace=2><a id="href_13223.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245274&level=2&cid=147148" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13224.Verse41" border=0 hspace=2><a id="href_13224.Verse41" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245294&level=2&cid=147168" class="ajax_tree1">Verse 41
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13225.Chapter11:Kāmavigarhaṇa','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13225.Chapter11:Kāmavigarhaṇa" border=0 hspace=2><a id="href_13225.Chapter11:Kāmavigarhaṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245296&level=1&cid=147170" class="ajax_tree0">Chapter 11: Kāmavigarhaṇa
+</td></tr></table>
+<div style="display:none;"  id="div_13225.Chapter11:Kāmavigarhaṇa">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13226.Verses1-20" border=0 hspace=2><a id="href_13226.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245297&level=2&cid=147171" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13227.Verses21-40" border=0 hspace=2><a id="href_13227.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245317&level=2&cid=147191" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13228.Verses41-60" border=0 hspace=2><a id="href_13228.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245337&level=2&cid=147211" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13229.Verses61-73" border=0 hspace=2><a id="href_13229.Verses61-73" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245357&level=2&cid=147231" class="ajax_tree1">Verses 61-73
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13230.Chapter12:Arāḍadarśana','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13230.Chapter12:Arāḍadarśana" border=0 hspace=2><a id="href_13230.Chapter12:Arāḍadarśana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245371&level=1&cid=147245" class="ajax_tree0">Chapter 12: Arāḍadarśana
+</td></tr></table>
+<div style="display:none;"  id="div_13230.Chapter12:Arāḍadarśana">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13231.Verses1-20" border=0 hspace=2><a id="href_13231.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245372&level=2&cid=147246" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13232.Verses21-40" border=0 hspace=2><a id="href_13232.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245392&level=2&cid=147266" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13233.Verses41-60" border=0 hspace=2><a id="href_13233.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245412&level=2&cid=147286" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13234.Verses61-80" border=0 hspace=2><a id="href_13234.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245432&level=2&cid=147306" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13235.Verses81-100" border=0 hspace=2><a id="href_13235.Verses81-100" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245452&level=2&cid=147326" class="ajax_tree1">Verses 81-100
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13236.Verses101-120" border=0 hspace=2><a id="href_13236.Verses101-120" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245472&level=2&cid=147346" class="ajax_tree1">Verses 101-120
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13237.Verse121" border=0 hspace=2><a id="href_13237.Verse121" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245492&level=2&cid=147366" class="ajax_tree1">Verse 121
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13238.Chapter13:Māravijaya','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13238.Chapter13:Māravijaya" border=0 hspace=2><a id="href_13238.Chapter13:Māravijaya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245494&level=1&cid=147368" class="ajax_tree0">Chapter 13: Māravijaya
+</td></tr></table>
+<div style="display:none;"  id="div_13238.Chapter13:Māravijaya">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13239.Verses1-20" border=0 hspace=2><a id="href_13239.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245495&level=2&cid=147369" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13240.Verses21-40" border=0 hspace=2><a id="href_13240.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245515&level=2&cid=147389" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13241.Verses41-60" border=0 hspace=2><a id="href_13241.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245535&level=2&cid=147409" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13242.Verses61-73" border=0 hspace=2><a id="href_13242.Verses61-73" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245555&level=2&cid=147429" class="ajax_tree1">Verses 61-73
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13243.Chapter14:Englightenment','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13243.Chapter14:Englightenment" border=0 hspace=2><a id="href_13243.Chapter14:Englightenment" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245569&level=1&cid=147443" class="ajax_tree0">Chapter 14: Englightenment
+</td></tr></table>
+<div style="display:none;"  id="div_13243.Chapter14:Englightenment">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13244.Verses1-20" border=0 hspace=2><a id="href_13244.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245570&level=2&cid=147444" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13245.Verses21-40" border=0 hspace=2><a id="href_13245.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245590&level=2&cid=147464" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13246.Verses21-40" border=0 hspace=2><a id="href_13246.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245591&level=2&cid=147465" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13247.Verses41-60" border=0 hspace=2><a id="href_13247.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245611&level=2&cid=147485" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13248.Verses61-80" border=0 hspace=2><a id="href_13248.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245631&level=2&cid=147505" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13249.Verses81-100" border=0 hspace=2><a id="href_13249.Verses81-100" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245651&level=2&cid=147525" class="ajax_tree1">Verses 81-100
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13250.Verses101-107" border=0 hspace=2><a id="href_13250.Verses101-107" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245671&level=2&cid=147545" class="ajax_tree1">Verses 101-107
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13251.Chapter15:TurningtheWheeloftheLaw','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13251.Chapter15:TurningtheWheeloftheLaw" border=0 hspace=2><a id="href_13251.Chapter15:TurningtheWheeloftheLaw" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245679&level=1&cid=147553" class="ajax_tree0">Chapter 15: Turning the Wheel of the Law
+</td></tr></table>
+<div style="display:none;"  id="div_13251.Chapter15:TurningtheWheeloftheLaw">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13252.Verses1-20" border=0 hspace=2><a id="href_13252.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245680&level=2&cid=147554" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13253.Verses21-40" border=0 hspace=2><a id="href_13253.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245700&level=2&cid=147574" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13254.Verses41-58" border=0 hspace=2><a id="href_13254.Verses41-58" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245720&level=2&cid=147594" class="ajax_tree1">Verses 41-58
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13255.Chapter16:ManyConversions','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13255.Chapter16:ManyConversions" border=0 hspace=2><a id="href_13255.Chapter16:ManyConversions" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245739&level=1&cid=147613" class="ajax_tree0">Chapter 16: Many Conversions
+</td></tr></table>
+<div style="display:none;"  id="div_13255.Chapter16:ManyConversions">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13256.Verses1-20" border=0 hspace=2><a id="href_13256.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245740&level=2&cid=147614" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13257.Verses21-40" border=0 hspace=2><a id="href_13257.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245760&level=2&cid=147634" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13258.Verses41-60" border=0 hspace=2><a id="href_13258.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245780&level=2&cid=147654" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13259.Verses61-80" border=0 hspace=2><a id="href_13259.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245800&level=2&cid=147674" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13260.Verses81-95" border=0 hspace=2><a id="href_13260.Verses81-95" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245820&level=2&cid=147694" class="ajax_tree1">Verses 81-95
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13261.Chapter17:Conversion(pravrajyā)oftheGreatDisciples','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13261.Chapter17:Conversion(pravrajyā)oftheGreatDisciples" border=0 hspace=2><a id="href_13261.Chapter17:Conversion(pravrajyā)oftheGreatDisciples" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245836&level=1&cid=147710" class="ajax_tree0">Chapter 17: Conversion (pravrajyā) of the Great Disciples
+</td></tr></table>
+<div style="display:none;"  id="div_13261.Chapter17:Conversion(pravrajyā)oftheGreatDisciples">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13262.Verses1-20" border=0 hspace=2><a id="href_13262.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245837&level=2&cid=147711" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13263.Verses21-40" border=0 hspace=2><a id="href_13263.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245857&level=2&cid=147731" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13264.Verse41" border=0 hspace=2><a id="href_13264.Verse41" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245877&level=2&cid=147751" class="ajax_tree1">Verse 41
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13265.Chapter18:TheInstructionofAnāthapiṇḍada','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13265.Chapter18:TheInstructionofAnāthapiṇḍada" border=0 hspace=2><a id="href_13265.Chapter18:TheInstructionofAnāthapiṇḍada" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245879&level=1&cid=147753" class="ajax_tree0">Chapter 18: The Instruction of Anāthapiṇḍada
+</td></tr></table>
+<div style="display:none;"  id="div_13265.Chapter18:TheInstructionofAnāthapiṇḍada">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13266.Verses1-20" border=0 hspace=2><a id="href_13266.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245880&level=2&cid=147754" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13267.Verses21-40" border=0 hspace=2><a id="href_13267.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245900&level=2&cid=147774" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13268.Verses41-60" border=0 hspace=2><a id="href_13268.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245920&level=2&cid=147794" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13269.Verses61-80" border=0 hspace=2><a id="href_13269.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245940&level=2&cid=147814" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13270.Verses81-87" border=0 hspace=2><a id="href_13270.Verses81-87" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245960&level=2&cid=147834" class="ajax_tree1">Verses 81-87
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13271.Chapter19:TheMeetingofFatherandSon','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13271.Chapter19:TheMeetingofFatherandSon" border=0 hspace=2><a id="href_13271.Chapter19:TheMeetingofFatherandSon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245968&level=1&cid=147842" class="ajax_tree0">Chapter 19: The Meeting of Father and Son
+</td></tr></table>
+<div style="display:none;"  id="div_13271.Chapter19:TheMeetingofFatherandSon">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13272.Verses1-20" border=0 hspace=2><a id="href_13272.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245969&level=2&cid=147843" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13273.Verses21-40" border=0 hspace=2><a id="href_13273.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=245989&level=2&cid=147863" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13274.Verses41-56" border=0 hspace=2><a id="href_13274.Verses41-56" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246009&level=2&cid=147883" class="ajax_tree1">Verses 41-56
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13275.Chapter20:AcceptanceofJetavana','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13275.Chapter20:AcceptanceofJetavana" border=0 hspace=2><a id="href_13275.Chapter20:AcceptanceofJetavana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246026&level=1&cid=147900" class="ajax_tree0">Chapter 20: Acceptance of Jetavana
+</td></tr></table>
+<div style="display:none;"  id="div_13275.Chapter20:AcceptanceofJetavana">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13276.Verses1-20" border=0 hspace=2><a id="href_13276.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246027&level=2&cid=147901" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13277.Verses21-40" border=0 hspace=2><a id="href_13277.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246047&level=2&cid=147921" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13278.Verses41-58" border=0 hspace=2><a id="href_13278.Verses41-58" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246067&level=2&cid=147941" class="ajax_tree1">Verses 41-58
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13279.Chapter21:Progress(srotas)oftheMission','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13279.Chapter21:Progress(srotas)oftheMission" border=0 hspace=2><a id="href_13279.Chapter21:Progress(srotas)oftheMission" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246086&level=1&cid=147960" class="ajax_tree0">Chapter 21: Progress (srotas) of the Mission
+</td></tr></table>
+<div style="display:none;"  id="div_13279.Chapter21:Progress(srotas)oftheMission">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13280.Verses1-20" border=0 hspace=2><a id="href_13280.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246087&level=2&cid=147961" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13281.Verses21-40" border=0 hspace=2><a id="href_13281.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246107&level=2&cid=147981" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13282.Verses41-60" border=0 hspace=2><a id="href_13282.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246127&level=2&cid=148001" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13283.Verses61-65" border=0 hspace=2><a id="href_13283.Verses61-65" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246147&level=2&cid=148021" class="ajax_tree1">Verses 61-65
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13284.Chapter22:TheVisittoAmrapāli'sGrove','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13284.Chapter22:TheVisittoAmrapāli'sGrove" border=0 hspace=2><a id="href_13284.Chapter22:TheVisittoAmrapāli'sGrove" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246153&level=1&cid=148027" class="ajax_tree0">Chapter 22: The Visit to Amrapāli's Grove
+</td></tr></table>
+<div style="display:none;"  id="div_13284.Chapter22:TheVisittoAmrapāli'sGrove">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13285.Verses1-20" border=0 hspace=2><a id="href_13285.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246154&level=2&cid=148028" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13286.Verses21-40" border=0 hspace=2><a id="href_13286.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246174&level=2&cid=148048" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13287.Verses41-55" border=0 hspace=2><a id="href_13287.Verses41-55" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246194&level=2&cid=148068" class="ajax_tree1">Verses 41-55
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13288.Chapter23:FixingtheFactorsofBodilyLife','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13288.Chapter23:FixingtheFactorsofBodilyLife" border=0 hspace=2><a id="href_13288.Chapter23:FixingtheFactorsofBodilyLife" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246210&level=1&cid=148084" class="ajax_tree0">Chapter 23: Fixing the Factors of Bodily Life
+</td></tr></table>
+<div style="display:none;"  id="div_13288.Chapter23:FixingtheFactorsofBodilyLife">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13289.Verses1-20" border=0 hspace=2><a id="href_13289.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246211&level=2&cid=148085" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13290.Verses21-40" border=0 hspace=2><a id="href_13290.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246231&level=2&cid=148105" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13291.Verses41-60" border=0 hspace=2><a id="href_13291.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246251&level=2&cid=148125" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13292.Verses61-94" border=0 hspace=2><a id="href_13292.Verses61-94" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246271&level=2&cid=148145" class="ajax_tree1">Verses 61-94
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13293.Chapter24:CompassionfortheLicchavis','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13293.Chapter24:CompassionfortheLicchavis" border=0 hspace=2><a id="href_13293.Chapter24:CompassionfortheLicchavis" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246287&level=1&cid=148161" class="ajax_tree0">Chapter 24: Compassion for the Licchavis
+</td></tr></table>
+<div style="display:none;"  id="div_13293.Chapter24:CompassionfortheLicchavis">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13294.Verses1-20" border=0 hspace=2><a id="href_13294.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246288&level=2&cid=148162" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13295.Verses21-40" border=0 hspace=2><a id="href_13295.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246308&level=2&cid=148182" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13296.Verses41-60" border=0 hspace=2><a id="href_13296.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246328&level=2&cid=148202" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13297.Verses61-64" border=0 hspace=2><a id="href_13297.Verses61-64" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246348&level=2&cid=148222" class="ajax_tree1">Verses 61-64
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13298.Chapter25:TheJourneytoNirvāṇa','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13298.Chapter25:TheJourneytoNirvāṇa" border=0 hspace=2><a id="href_13298.Chapter25:TheJourneytoNirvāṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246353&level=1&cid=148227" class="ajax_tree0">Chapter 25: The Journey to Nirvāṇa
+</td></tr></table>
+<div style="display:none;"  id="div_13298.Chapter25:TheJourneytoNirvāṇa">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13299.Verses1-20" border=0 hspace=2><a id="href_13299.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246354&level=2&cid=148228" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13300.Verses21-40" border=0 hspace=2><a id="href_13300.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246374&level=2&cid=148248" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13301.Verses41-60" border=0 hspace=2><a id="href_13301.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246394&level=2&cid=148268" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13302.Verses61-80" border=0 hspace=2><a id="href_13302.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246414&level=2&cid=148288" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13303.Verse81" border=0 hspace=2><a id="href_13303.Verse81" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246434&level=2&cid=148308" class="ajax_tree1">Verse 81
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13304.Chapter26:TheMahāparinirvāṇa','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13304.Chapter26:TheMahāparinirvāṇa" border=0 hspace=2><a id="href_13304.Chapter26:TheMahāparinirvāṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246436&level=1&cid=148310" class="ajax_tree0">Chapter 26: The Mahāparinirvāṇa
+</td></tr></table>
+<div style="display:none;"  id="div_13304.Chapter26:TheMahāparinirvāṇa">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13305.Verses1-20" border=0 hspace=2><a id="href_13305.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246437&level=2&cid=148311" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13306.Verses21-40" border=0 hspace=2><a id="href_13306.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246457&level=2&cid=148331" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13307.Verses41-60" border=0 hspace=2><a id="href_13307.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246477&level=2&cid=148351" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13308.Verses61-80" border=0 hspace=2><a id="href_13308.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246497&level=2&cid=148371" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13309.Verses81-100" border=0 hspace=2><a id="href_13309.Verses81-100" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246517&level=2&cid=148391" class="ajax_tree1">Verses 81-100
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13310.Verses101-106" border=0 hspace=2><a id="href_13310.Verses101-106" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246537&level=2&cid=148411" class="ajax_tree1">Verses 101-106
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13311.Chapter27:EulogyofNirvāṇa','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13311.Chapter27:EulogyofNirvāṇa" border=0 hspace=2><a id="href_13311.Chapter27:EulogyofNirvāṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246544&level=1&cid=148418" class="ajax_tree0">Chapter 27: Eulogy of Nirvāṇa
+</td></tr></table>
+<div style="display:none;"  id="div_13311.Chapter27:EulogyofNirvāṇa">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13312.Verses1-20" border=0 hspace=2><a id="href_13312.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246545&level=2&cid=148419" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13313.Verses21-40" border=0 hspace=2><a id="href_13313.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246565&level=2&cid=148439" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13314.Verses41-60" border=0 hspace=2><a id="href_13314.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246585&level=2&cid=148459" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13315.Verses61-80" border=0 hspace=2><a id="href_13315.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246605&level=2&cid=148479" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13316.Verses81-84" border=0 hspace=2><a id="href_13316.Verses81-84" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246625&level=2&cid=148499" class="ajax_tree1">Verses 81-84
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('13317.Chapter28:TheDivisionoftheRelics','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_13317.Chapter28:TheDivisionoftheRelics" border=0 hspace=2><a id="href_13317.Chapter28:TheDivisionoftheRelics" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246630&level=1&cid=148504" class="ajax_tree0">Chapter 28: The Division of the Relics
+</td></tr></table>
+<div style="display:none;"  id="div_13317.Chapter28:TheDivisionoftheRelics">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13318.Verses1-20" border=0 hspace=2><a id="href_13318.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246631&level=2&cid=148505" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13319.Verses21-40" border=0 hspace=2><a id="href_13319.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246651&level=2&cid=148525" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13320.Verses41-60" border=0 hspace=2><a id="href_13320.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246671&level=2&cid=148545" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13321.Verses61-75" border=0 hspace=2><a id="href_13321.Verses61-75" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246691&level=2&cid=148565" class="ajax_tree1">Verses 61-75
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_13322.Colophon" border=0 hspace=2><a id="href_13322.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=77&mid=246707&level=1&cid=148581" class="ajax_tree0">Colophon
+</td></tr></table>
+<script language=javascript>test('13176.Verses61-80|13172.Chapter1:Bhagavatprasūti|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=77&amp;mid=244601&amp;level=2">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=77&amp;cid=146475&amp;mid=244601&amp;level=2">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=77&amp;cid=146475&amp;mid=244601&amp;level=2">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><div class='kilderef' id='2572795'></div><div class='clear'></div><span id='2572795bi' class='verse'>
+							dhātryaṅkasaṃviṣṭam avekṣya cainaṃ devyaṅkasaṃviṣṭam ivāgnisūnum |<br />babhūva pakṣmāntavicañcitāśrur<a class='fotnote cn' name='FN2090cn1' href='#N2090cn1'><sup>1</sup></a>
+ niśvasya caiva tridivonmukho ’bhūt || 1.61 ||&nbsp;</span><div style='' id='1' class='note cn'>1.<a class="internt" name='N2090cn1' href='#FN2090cn1'> EBC: pakṣmāntar iva añcitāśrur.</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><div class='kilderef' id='1104990'></div><div class='clear'></div><span id='1104990bi' class='verse'>
+							(2)王見仙人泣 念子心戰慄<br />(3)氣結盈心胸 驚悸不自安&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><div class='kilderef' id='7878496'></div><div class='clear'></div><span id='7878496bi' class='verse'>
+							lha mo’i paṅ na źugs pa me yi bu bźin du | | ma ma’i paṅ du bźugs pa mṅon par mthoṅ nas ni | |<br />byuṅ gyur rdzi ma’i mtha’ ru mchi ma rnams byuṅ ste | | dbugs med gyur nas gyen du lta la źal phyogs gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><div class='kilderef' id='2159349'></div><div class='clear'></div><span id='2159349bi' class='verse'>
+							85. The king beholding the tears of the Rishi, thinking of his son, his soul was overcome, and his breath fast held his swelling heart. Thus alarmed and ill at ease,&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><div class='kilderef' id='1112667'></div><div class='clear'></div><span id='1112667bi' class='verse'>
+							66. Having beheld him seated on his nurse’s side, like the son of Agni (Skanda) seated on Devî’s side, he stood with the tears hanging on the ends of his eyelashes, and sighing he looked up towards heaven.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572796bi' class='verse'>
+							dṛṣṭvāsitaṃ tv aśrupariplutākṣaṃ snehāt tanūjasya<a class='fotnote cn' name='FN2090cn2' href='#N2090cn2'><sup>2</sup></a>
+ nṛpaś cakampe |<br />sagadgadaṃ bāṣpakaṣāyakaṇṭhaḥ papraccha sa<a class='fotnote cn' name='FN2090cn3' href='#N2090cn3'><sup>3</sup></a>
+ prāñjalir ānatāṅgaḥ || 1.62 ||&nbsp;</span><div style='' id='2' class='note cn'>2.<a class="internt" name='N2090cn2' href='#FN2090cn2'> EBC: tu putrasya.</a>&nbsp; 3.<a class="internt" name='N2090cn3' href='#FN2090cn3'> EBC: ca.</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1104991bi' class='verse'>
+							(4)不覺從<a class='fotnote cn' name='FN1124cn1' href='#N1124cn1'><sup>1</sup></a>
+坐起 稽首仙人足<br />(5)而白仙人言 此子生奇特&nbsp;</span><div style='' id='3' class='note cn'>1.<a class="internt" name='N1124cn1' href='#FN1124cn1'> 坐＝座＜三＞</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878497bi' class='verse'>
+							mig dag mchi (6)mas yoṅs gaṅ dkar min mthoṅ nas ni | | bu la brtse ba’i phyir ni mi skyoṅ ’dar gyur te | |<br />mchi ma daṅ ni gri ba kha źiṅ ldab ldib bcas | | thal mo sbyar źiṅ yan lag btud de dris par gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159350bi' class='verse'>
+							86. Unconsciously he arose from his seat, and, bowing his head at the Rishi’s feet he addressed him in these words, ’This son of mine, born thus wonderfully,&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112668bi' class='verse'>
+							67. But seeing Asita with his eyes thus filled with tears, the king was agitated through his love for his son, and with his hands clasped and his body bowed he thus asked him in a broken voice choked with weeping,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572797bi' class='verse'>
+							alpāntaraṃ yasya vapuḥ surebhyo<a class='fotnote cn' name='FN2090cn4' href='#N2090cn4'><sup>4</sup></a>
+ bahvadbhutaṃ yasya ca janma dīptam |<br />yasyottamaṃ bhāvinam āttha cārthaṃ taṃ prekṣya kasmāt tava dhīra bāṣpaḥ || 1.63 ||&nbsp;</span><div style='' id='4' class='note cn'>4.<a class="internt" name='N2090cn4' href='#FN2090cn4'> EBC: muneḥ syād.</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1104992bi' class='verse'>
+							(6)容貎極端嚴 天人殆不異<br />(7)<a class='fotnote cn' name='FN1124cn2' href='#N1124cn2'><sup>2</sup></a>
+汝言人中上 何故生憂悲&nbsp;</span><div style='' id='5' class='note cn'>2.<a class="internt" name='N1124cn2' href='#FN1124cn2'> 汝言＝當爲＜三＞</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878498bi' class='verse'>
+							gaṅ gi lus ni lha las bar na cuṅ zad cig | | raṅ gi skye ba ṅo mtshar maṅ po’i sgron ma ste | |<br />gaṅ (7)gi don ni mchog tu ’gyur bar smra ba ste | | rab tu mthoṅ nas brtan pa gaṅ phyir mchim ’oṅ | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159351bi' class='verse'>
+							87. ’Beautiful in face, and surpassingly graceful, little different from the gods in form, giving promise of superiority in the world, ah! why has he caused thee grief and pain?&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112669bi' class='verse'>
+							68. ‘One whose beauty has little to distinguish it from that of a divine sage, and whose brilliant birth has been so wonderful, and for whom thou hast prophesied a transcendent future,--wherefore, on seeing him, do tears come to thee, O reverend one?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572798bi' class='verse'>
+							api sthirāyur bhagavan kumāraḥ kaccin na śokāya mama prasūtaḥ |<br />labdhā<a class='fotnote cn' name='FN2090cn5' href='#N2090cn5'><sup>5</sup></a>
+ kathaṃcit salilāñjalir me na khalv imaṃ pātum upaiti kālaḥ || 1.64 ||&nbsp;</span><div style='' id='6' class='note cn'>5.<a class="internt" name='N2090cn5' href='#FN2090cn5'> EBC: labdhaḥ.</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1104993bi' class='verse'>
+							(8)將非短壽子 生我憂悲乎<br />(9)久渇得甘露 <a class='fotnote cn' name='FN1124cn3' href='#N1124cn3'><sup>3</sup></a>
+而反復失耶&nbsp;</span><div style='' id='7' class='note cn'>3.<a class="internt" name='N1124cn3' href='#FN1124cn3'> 而反復失耶＝而復反棄乎＜三＞</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878499bi' class='verse'>
+							bcom ldan gźon nu brtan pa’i tshe can yin sñam mam | | bdag gi mya ṅan ched du skyes pa min nam ci | |<br />bdag la chu yi sñim ba ci źig ltar rñed de | | ’di ni dus kyis ’thuṅ phyir ñe bar ’oṅs ma yin | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159352bi' class='verse'>
+							88. ’Forbid it, that my son should die! (should be short-lived!)--(the thought) creates in me grief and anxiety; that one athirst, within reach of the eternal draught, should after all reject and lose it! sad indeed!&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112670bi' class='verse'>
+							69. ‘Is the prince, O holy man, destined to a long life? Surely he cannot be born for my sorrow. I have with difficulty obtained a handful of water, surely it is not death which comes to drink it.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572799bi' class='verse'>
+							apy akṣayaṃ me yaśaso nidhānaṃ kaccid dhruvo me kulahastasāraḥ |<br />api prayāsyāmi sukhaṃ paratra supto ’pi<a class='fotnote cn' name='FN2090cn6' href='#N2090cn6'><sup>6</sup></a>
+ putre ’nimiṣaikacakṣuḥ || 1.65 ||&nbsp;</span><div style='' id='8' class='note cn'>6.<a class="internt" name='N2090cn6' href='#FN2090cn6'> EBC: supte ’pi.</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1104994bi' class='verse'>
+							(10)將非失財寶 喪家亡國<a class='fotnote cn' name='FN1124cn4' href='#N1124cn4'><sup>4</sup></a>
+乎<br />(11)若有勝子存 國嗣有所寄<br />(12)我死時心悦 安樂生他世<br />(13)猶如人兩目 一眠而一覺&nbsp;</span><div style='' id='9' class='note cn'>4.<a class="internt" name='N1124cn4' href='#FN1124cn4'> 乎＝子＜宋＞</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878500bi' class='verse'>
+							(5b1)bdag gi sñan grags gter ni mi zad yin sñam mam | | ṅes par bdag gi rigs kyi lag nor yin sñam ci | |<br />bde bar pha rol du ni rab tu ’gro sñam mam | | gñid par gyur kyaṅ bu ni phye ba’i mig gcig yod | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159353bi' class='verse'>
+							89. ’Forbid it, he should lose his wealth and treasure! dead to his house! lost to his country! for he who has a prosperous son in life, gives pledge that his country’s weal is well secured;<br />90. ’And then, coming to die, my heart will rest content, rejoicing in the thought. of offspring surviving me; even as a man possessed of two eyes, one of which keeps watch, while the other sleeps;&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112671bi' class='verse'>
+							70. ‘Tell me, is the hoard of my fame free from destruction? Is this chief prize of my family secure ? Shall I ever depart happily to another life,--I who keep one eye ever awake, even when my son is asleep?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572800bi' class='verse'>
+							kaccin na me jātam aphullam eva kulapravālaṃ<a class='fotnote cn' name='FN2090cn7' href='#N2090cn7'><sup>7</sup></a>
+ pariśoṣabhāgi |<br />kṣipraṃ vibho brūhi na me ’sti śāntiḥ snehaṃ sute vetsi hi bāndhavānām || 1.66 ||&nbsp;</span><div style='' id='10' class='note cn'>7.<a class="internt" name='N2090cn7' href='#FN2090cn7'> EBC: prabālaṃ.</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1104995bi' class='verse'>
+							(14)莫如秋霜花 雖敷而無實<br />(15)人於親族中 愛深無過子<br />(16)宜時爲記説 令我得蘇息&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878501bi' class='verse'>
+							bdag gi rigs kyi myu gru skyes pa ma rgyas par | | yoṅs su skams pa’i skal ba (2)can źig min sñam mam | |<br />khyab bdag myur bar gsuṅs śig bdag la źi ba med | | gñen ’dun rnams kyis bu la brtse ba khyed kyis rig | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159354bi' class='verse'>
+							91. ’Not like the frost-flower of autumn, which though it seems to bloom, is not a reality. A man who, midst his tribe and kindred, deeply loves a spotless son,<br />92. ’At every proper time in recollection of it has joy; O! that you would cause me to revive!’&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112672bi' class='verse'>
+							71. ‘Surely this young shoot of my family is not born barren, destined only to wither! Speak quickly, my lord, I cannot wait; thou well knowest the love of near kindred for a son.’&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572801bi' class='verse'>
+							ity āgatāvegam aniṣṭabuddhyā buddhvā narendraṃ sa munir babhāṣe |<br />mā bhūn matis te nṛpa kācid anyā niḥsaṃśayaṃ tad yad avocam asmi || 1.67 ||&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1104996bi' class='verse'>
+							(17)仙人知父王 心懷大憂懼<br />(18)即告言大王 王今勿恐怖<br />(19)前已語大王 愼勿自生疑<br />(20)今相猶如前 不應懷異想<br />(21)自惟我年暮 <a class='fotnote cn' name='FN1124cn5' href='#N1124cn5'><sup>5</sup></a>
+悲慨泣歎耳&nbsp;</span><div style='' id='11' class='note cn'>5.<a class="internt" name='N1124cn5' href='#FN1124cn5'> 悲慨泣歎耳＝不及故悲泣＜三＞</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878502bi' class='verse'>
+							de ltar mi ’dod blo yis ’khrul pa byuṅ gyur pa | | rig nas mi dbaṅ rgyal la thub pa des smras pa | |<br />bdag gis smras pa gaṅ de the tshom (3)med pa de | | mi skyoṅ khyed kyi blo gros gźan gaṅ ma gyur cig | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159355bi' class='verse'>
+							The Rishi, knowing the king-sire to be thus greatly afflicted at heart,<br />93. Immediately addressed the Maharâga: ’Let not the king be for a moment anxious! the words I have spoken to the king, let him ponder these, and not permit himself to doubt;<br />94. ’The portents now are as they were before, cherish then no other thoughts! But recollecting I myself am old, on that account I could not hold my tears;&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112673bi' class='verse'>
+							72. Knowing the king to be thus agitated through his fear of some impending evil, the sage thus addressed him: ‘Let not thy mind, O monarch, be disturbed,--all that I have said is certainly true.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572802bi' class='verse'>
+							nāsyānyathātvaṃ prati vikriyā me svāṃ vañcanāṃ tu prati viklavo ’smi |<br />kālo hi me yātum ayaṃ ca jāto jātikṣayasyāsulabhasya boddhā || 1.68 ||&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1104997bi' class='verse'>
+							(22)今我臨終時 此子應世<a class='fotnote cn' name='FN1124cn6' href='#N1124cn6'><sup>6</sup></a>
+生<br />(23)爲盡生故生 斯人難得遇&nbsp;</span><div style='' id='12' class='note cn'>6.<a class="internt" name='N1124cn6' href='#FN1124cn6'> 生＝王＜三＞</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878503bi' class='verse'>
+							’di yi gźan gyur mtshon min bdag gi rnam ’gyur te | | ’on kyaṅ raṅ la slu bar rab mtshon rnam par ’khrugs | |<br />skye ba zad pa’i rñed par bla min rtogs pa po | | ’di skyes bdag gi ’gro ba la ni dus yin no | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159356bi' class='verse'>
+							95. ’For now my end is coming on. But this son of thine will rule the world, born for the sake of all that lives! this is indeed one difficult to meet with;&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112674bi' class='verse'>
+							73. ‘I have no feeling of fear as to his being subject to change, but I am distressed for mine own disappointment. It is my time to depart, and this child is now born,--he who knows that mystery hard to attain, the means of destroying birth.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572803bi' class='verse'>
+							vihāya rājyaṃ viṣayeṣv anāsthas tīvraiḥ prayatnair adhigamya tattvam |<br />jagaty ayaṃ mohatamo nihantuṃ jvaliṣyati jñānamayo hi sūryaḥ || 1.69 ||&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1104998bi' class='verse'>
+							(24)當捨聖王位 不著五欲境<br />(25)精勤修苦行 開覺得眞實&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878504bi' class='verse'>
+							rgyal srid rnam (4)bar spaṅs nas yul rnams la mi gnas | | ’bad pa drag po rnams kyis de ñid thob byas nas | |<br />’di ni ’gro la gti mug mun pa rnam ’joms phyir | | ye śes raṅ bźin ñi ma rab tu ’bar bar ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159357bi' class='verse'>
+							96. ’He shall give up his royal estate, escape from the domain of the five desires , with resolution and with diligence practise austerities, and then awakening, grasp the truth.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112675bi' class='verse'>
+							74. Having forsaken his kingdom, indifferent to all worldly objects, and having attained the highest truth by strenuous efforts, he will shine forth as a sun of knowledge to destroy the darkness of illusion in the world.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572804bi' class='verse'>
+							duḥkhārṇavād vyādhivikīrṇaphenāj jarātaraṅgān maraṇogravegāt |<br />uttārayiṣyaty ayam uhyamānam ārtaṃ<a class='fotnote cn' name='FN2090cn8' href='#N2090cn8'><sup>8</sup></a>
+ jagaj jñānamahāplavena || 1.70 ||&nbsp;</span><div style='' id='13' class='note cn'>8.<a class="internt" name='N2090cn8' href='#FN2090cn8'> EBC: ārttaṃ.</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1104999bi' class='verse'>
+							(26)常爲諸群生 滅除癡冥障<br />(27)於世永熾燃 智慧日光明&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878505bi' class='verse'>
+							sdug bsṅal rgya mtsho nad rnams bkram pa’i dbu ba can | | rga ba’i dpa’ (5)rlabs ’chi ba’i śugs ni drag po las | |<br />’gro ba ñam thag byiṅ bar gyur rnams ’di yis ni | | ye śes gru bo chen po yis ni sgrol bar byed | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159358bi' class='verse'>
+							97. ’Then constantly, for the world’s sake (all living things), destroying the impediments of ignorance and darkness, he shall give to all enduring light, the brightness of the sun of perfect wisdom.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112676bi' class='verse'>
+							75. ‘He will deliver by the boat of knowledge the distressed world, borne helplessly along, from the ocean of misery which throws up sickness as its foam, tossing with the waves of old age, and rushing with the dreadful onflow of death.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572805bi' class='verse'>
+							prajñāmbuvegāṃ sthiraśīlavaprāṃ samādhiśītāṃ vratacakravākām |<br />asyottamāṃ dharmanadīṃ pravṛttāṃ tṛṣṇārditaḥ pāsyati jīvalokaḥ || 1.71 ||&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1105000bi' class='verse'>
+							(28)衆生沒苦海 衆病爲聚沫<br />(29)衰老爲巨浪 死爲海洪濤<br />(3b1)乘輕智慧舟 <a class='fotnote cn' name='FN1124cn7' href='#N1124cn7'><sup>7</sup></a>
+渡此衆流難&nbsp;</span><div style='' id='14' class='note cn'>7.<a class="internt" name='N1124cn7' href='#FN1124cn7'> 渡＝度＜三＞</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878506bi' class='verse'>
+							śes rab chu yi śugs la brten pa’i tshul khrims dogs | | tiṅ ṅe ’dzin ni bsil ba’i brtul źugs ṅaṅ pa ’phyo | |<br />’di yi mchog gi chos (6)kyi chu bos rab bskor la | | sred pas ñam thag gson pa’i ’jig rten ’thuṅ bar byed | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159359bi' class='verse'>
+							98. ’All flesh submerged in the sea of sorrow; all diseases collected as the bubbling froth; decay and age like the wild billows; death like the engulfing ocean;<br />99. ’Embarking lightly in the boat of wisdom he will save the world from all these perils,&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112677bi' class='verse'>
+							76. ‘The thirsty world of living beings will drink the flowing stream of his Law, bursting forth with the water of wisdom, enclosed by the banks of strong moral rules, delightfully cool with contemplation, and filled with religious vows as with ruddy geese.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572806bi' class='verse'>
+							duḥkhārditebhyo viṣayāvṛtebhyaḥ saṃsārakāntārapathasthitebhyaḥ |<br />ākhyāsyati hy eṣa vimokṣamārgaṃ mārgapranaṣṭebhya ivādhvagebhyaḥ || 1.72 ||&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1105001bi' class='verse'>
+							(2)智慧泝流水 淨戒爲傍岸<br />(3)三昧清涼池 正受衆奇鳥&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878507bi' class='verse'>
+							sdug bsṅal gyis ñam thag daṅ yul gyis bsgribs rnams daṅ | | ’khor ba’i ’brog dgon ’jigs par gnas pa rnams la ni | |<br />lam rab chud zos rnams la lam ’gro rnams bźin du | | (7)’dis ni rnam par dag pa’i lam dag ’chad par ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159360bi' class='verse'>
+							by wisdom stemming back the flood. His, pure teaching like to the neighbouring shore,<br />100. ’The power of meditation, like a cool lake, will be enough for all the unexpected birds;&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112678bi' class='verse'>
+							77. ‘He will proclaim the way of deliverance to those afflicted with sorrow, entangled in objects of sense, and lost in the forest-paths of worldly existence, as to travellers who have lost their way.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572807bi' class='verse'>
+							vidahyamānāya janāya loke rāgāgnināyaṃ viṣayendhanena |<br />prahlādam ādhāsyati dharmavṛṣṭyā vṛṣṭyā mahāmegha ivātapānte || 1.73 ||&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1105002bi' class='verse'>
+							(4)如此甚深廣 正法之大河<br />(5)渇愛諸群生 飮之以蘇息&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878508bi' class='verse'>
+							yul gyi bud śiṅ can gyi ’dod chags me yis ni | | ’jig rten skye bo rnam par bsregs par gyur pa la | |<br />sos ka’i tha mar sprin chen gyis ni char bźin du | | ’di yi chos kyi char gyis rab tu sim byed ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159361bi' class='verse'>
+							thus deep and full and wide is the great river of the true law;<br />101. ’All creatures parched by the drought of lust may freely drink thereof, without stint;&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112679bi' class='verse'>
+							78. ‘By the rain of the Law he will give gladness to the multitude who are consumed in this world with that fire of desire whose fuel is worldly objects, as a great cloud does with its showers at the end of the hot season.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572808bi' class='verse'>
+							tṛṣṇārgalaṃ mohatamaḥkapāṭaṃ dvāraṃ prajānām apayānahetoḥ |<br />vipāṭayiṣyaty ayam uttamena saddharmatāḍena durāsadena || 1.74 ||&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1105003bi' class='verse'>
+							(6)<a class='fotnote cn' name='FN1124cn8' href='#N1124cn8'><sup>8</sup></a>
+染著五欲境 衆苦所驅迫<br />(7)迷生死曠野 莫知所歸趣<br />(8)菩薩出世間 爲通解脱道&nbsp;</span><div style='' id='15' class='note cn'>8.<a class="internt" name='N1124cn8' href='#FN1124cn8'> 染＝深＜三＞</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878509bi' class='verse'>
+							sred pa’i sgo (6a1)gtan ma rig mun pa’i sgo glegs can | | sgo la skye dgu rnams kyi ’thon pa’i rgyu las ni | |<br />’di yis mchog rab kun nas rñed par dka’ ba yi | | dam pa’i chos kyi sgras ni rnam par ’byed bar ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159362bi' class='verse'>
+							those enchained in the domain of the five desires, those driven along by many sorrows,<br />102. ’And deceived amid the wilderness of birth and death, in ignorance of the way of escape, for these Bodhisattva has been born in the world, to open out a way of salvation.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112680bi' class='verse'>
+							79. ‘He will break open for the escape of living beings that door whose bolt is desire and whose two leaves are ignorance and delusion,--with that excellent blow of the good Law which is so hard to find.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572809bi' class='verse'>
+							svair mohapāśaiḥ pariveṣṭitasya duḥkhābhibhūtasya nirāśrayasya |<br />lokasya saṃbudhya ca dharmarājaḥ kariṣyate bandhanamokṣam eṣaḥ || 1.75 ||&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1105004bi' class='verse'>
+							(9)世間貪欲火 境界薪熾然<br />(10)興發大悲雲 法雨雨令滅<br />(11)癡闇門重<a class='fotnote cn' name='FN1124cn9' href='#N1124cn9'><sup>9</sup></a>
+扇 貪欲爲關鑰<br />(12)閉塞諸群生 出要解脱門<br />(13)金剛智慧鑷 拔恩愛逆<a class='fotnote cn' name='FN1124cn10' href='#N1124cn10'><sup>10</sup></a>
+鑚」<br />(14)愚癡網自纒 窮苦無所依<br />(15)法王出世間 能解衆生縛&nbsp;</span><div style='' id='16' class='note cn'>9.<a class="internt" name='N1124cn9' href='#FN1124cn9'> 扇＝扉＜三＞</a>&nbsp; 10.<a class="internt" name='N1124cn10' href='#FN1124cn10'> 鑚＝毛＜三＞</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878510bi' class='verse'>
+							raṅ gi las kyi źags pa rnams kyis yoṅs dkris śiṅ | | (2)sdug bsṅal dag gis mṅon par zil non rten med pa’i | |<br />’jig rten rnams kyi rdzogs pa’i byaṅ chub brñes nas kyaṅ | | chos kyi rgyal po ’dis ni ’chiṅ ba mthar mdzad ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159363bi' class='verse'>
+							103. ’The fire of lust and covetousness, burning with the fuel of the objects of sense, (on the flames) he has caused the cloud of his mercy to rise, so that the rain of the law may extinguish them.<br />104. ’The heavy gates of gloomy unbelief, fast kept by covetousness and lust, within which are confined all living things, he opens and gives free deliverance.<br />105. ’With the tweezers of his diamond wisdom he plucks out the opposing principles of lustful desire.<br />In the self-twined meshes of folly and ignorance all flesh poor and in misery, helplessly (lying),<br />106. ’The king of the law has come forth, to rescue these from bondage.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112681bi' class='verse'>
+							80. ‘He, the king of the Law, when he has attained to supreme knowledge, will achieve the deliverance from its bonds of the world now overcome by misery, destitute of every refuge, and enveloped in its own chains of delusion.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572810bi' class='verse'>
+							tan mā kṛthāḥ śokam imaṃ prati tvam asmin sa śocyo ’sti<a class='fotnote cn' name='FN2090cn9' href='#N2090cn9'><sup>9</sup></a>
+ manuṣyaloke |<br />mohena vā kāmasukhair madād vā yo naiṣṭhikaṃ śroṣyati nāsya dharmam || 1.76 ||&nbsp;</span><div style='' id='17' class='note cn'>9.<a class="internt" name='N2090cn9' href='#FN2090cn9'> EBC: tat saumya śocye hi.</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1105005bi' class='verse'>
+							(16)王莫以此子 自生憂悲患<br />(17)當憂彼衆生 著欲違正法&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878511bi' class='verse'>
+							rmoṅs sam ’dod pa’i bde ba yis sam rgyags las ruṅ | | ’di yi mthar thug chos gaṅ thos par mi (3)byed pa | |<br />mi yi ’jig rten ’dir de mya ṅan bya ba’i gnas | | de phyir khyed ñid ’di la mya ṅan ma byed cig | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159364bi' class='verse'>
+							Let not the king in respect of this his son encourage in himself one thought of doubt or pain;<br />107. ’But rather let him grieve on account of the world, led captive by desire, opposed to truth;&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112682bi' class='verse'>
+							81. ‘Therefore make no sorrow for him,--that belongs rather, kind sire, to the pitiable world of human beings, who through illusion or the pleasures of desire or intoxication refuse to hear his perfect Law.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572811bi' class='verse'>
+							bhraṣṭasya tasmāc ca guṇād ato me dhyānāni labdhvāpy akṛtārthataiva |<br />dharmasya tasyā śravaṇād ahaṃ hi manye vipattiṃ tridive ’pi vāsam || 1.77 ||&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1105006bi' class='verse'>
+							(18)我今老死壞 遠離聖功徳<br />(19)雖得諸禪定 而不獲其利<br />(20)於此菩薩所 竟不聞正法<br />(21)身壞命終後 必生三難天&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878512bi' class='verse'>
+							yon tan rgya mtsho ’di las ’khrul gyur bdag gi ni | | bsam gtan rnams ni thob kyaṅ don byas med ñid de | |<br />de yi dam chos ma thos pa la kho bo ni | | mtho ris dag na (4)gnas kyaṅ phun tshogs med pa sñam | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159365bi' class='verse'>
+							but I, indeed, amid the ruins of old age and death, am far removed from the meritorious condition of the holy one,<br />108. ’Possessed indeed of powers of abstraction, yet not within reach of the gain he will give,<br />to be derived from his teaching as the Bodhisattva; not permitted to hear his righteous law,<br />109. ’My body worn out, after death, alas! (destined) to be born as a Deva still liable to the three calamities (old age, decay, and death), (therefore I weep).’&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112683bi' class='verse'>
+							82. ‘Therefore since I have fallen short of that excellence, though I have accomplished all the stages of contemplation, my life is only a failure; since I have not heard his Law, I count even dwelling in the highest heaven a misfortune.’&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572812bi' class='verse'>
+							iti śrutārthaḥ sasuhṛt sadāras tyaktvā viṣādaṃ mumude narendraḥ |<br />evaṃvidho ’yaṃ tanayo mameti mene sa hi svām api sāravattām<a class='fotnote cn' name='FN2090cn10' href='#N2090cn10'><sup>10</sup></a>
+ || 1.78 ||&nbsp;</span><div style='' id='18' class='note cn'>10.<a class="internt" name='N2090cn10' href='#FN2090cn10'> EBC: sāramattām.</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1105007bi' class='verse'>
+							(22)王及諸眷屬 聞彼仙人説<br />(23)知其自憂歎 恐怖悉<a class='fotnote cn' name='FN1124cn11' href='#N1124cn11'><sup>11</sup></a>
+以除&nbsp;</span><div style='' id='19' class='note cn'>11.<a class="internt" name='N1124cn11' href='#FN1124cn11'> 以＝已＜三＞</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878513bi' class='verse'>
+							de ltar don thos bśes daṅ bcas śiṅ btsun mor bcas | | yid mi bde ba dor nas mi dbaṅ dgar gyur la | |<br />rnam pa de ltar bdag gi bu ni ’di’o źes | | des ni bdag ñid la ni sñiṅ po ldan par bsams | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159366bi' class='verse'>
+							The king and all his household attendants, hearing the words of the Rishi,<br />110. Knowing the cause of his regretful sorrow, banished from their minds all further anxiety:&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112684bi' class='verse'>
+							83. Having heard these words, the king with his queen and his friends abandoned sorrow and rejoiced; thinking, ‘such is this son of mine,’ he considered that his excellence was his own.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572813bi' class='verse'>
+							ārṣeṇa<a class='fotnote cn' name='FN2090cn11' href='#N2090cn11'><sup>11</sup></a>
+ mārgeṇa tu yāsyatīti cintāvidheyaṃ hṛdayaṃ cakāra |<br />na khalv asau na priyadharmapakṣaḥ saṃtānanāśāt tu bhayaṃ dadarśa || 1.79 ||&nbsp;</span><div style='' id='20' class='note cn'>11.<a class="internt" name='N2090cn11' href='#FN2090cn11'> EBC: āryeṇa.</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1105008bi' class='verse'>
+							(24)生此奇特子 我心得大安」<br />(25)出家捨世榮 修習仙人道<br />(26)<a class='fotnote cn' name='FN1124cn12' href='#N1124cn12'><sup>12</sup></a>
+遂不紹國位 復令我不悦&nbsp;</span><div style='' id='21' class='note cn'>12.<a class="internt" name='N1124cn12' href='#FN1124cn12'> 遂不紹國＝不紹國嗣＜三＞</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878514bi' class='verse'>
+							’phags pa’i chos rnams kyis (5)kyaṅ ’gro bar ’gyur ro źes | | bsam pa’i rnam par gzuṅ bya sñiṅ la byas gyur te | |<br />ṅes par ’di ni mi sdug chos kyi phyogs min la | | rigs rgyud ñams pa las ni ’on kyaṅ ’jigs pa mthoṅ | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159367bi' class='verse'>
+							’And now (the king. said) to have begotten this excellent son, gives me rest at heart;<br />111. ’But that he should leave his kingdom and home, and practise the life of an ascetic, not anxious to ensure the stability of the kingdom, the thought of this still brings with it pain.’&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112685bi' class='verse'>
+							84. But he let his heart be influenced by the thought, ‘he will travel by the noble path,’--he was not in truth averse to religion, yet still he saw alarm at the prospect of losing his child.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='2572814bi' class='verse'>
+							atha munir asito nivedya tattvaṃ sutaniyataṃ sutaviklavāya rājñe |<br />sabahumatam udīkṣyamāṇarūpaḥ pavanapathena yathāgataṃ jagāma || 1.80 ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "2572795";
+							kilderef = "Buddhac. Eng: Johnston (1978)  - Eng: Johnston (1978) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='1105009bi' class='verse'>
+							(27)爾時彼仙人 向王眞實説<br />(28)必如王所慮 當成正覺道&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "1104990";
+							kilderef = "Buddhac. Chi: 曇無讖, T.192  3a2 - Chi: 曇無讖, T.192 b28";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7878515bi' class='verse'>
+							de nas bu la rnam par ’khrugs pa’i rgyal po la | | bu yi ṅes pa’i de ñid rig par byas (6)nas su | |<br />gus bcas gyen du gzugs mthoṅ dkar min thub pa ni | | rluṅ gi lam gyis ji ltar ’oṅs par gśegs par gyur | |&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7878496";
+							kilderef = "Buddhac. Tib: Sa dbaṇ bzaṇ po and Blo gros rgyal po, Tg, skyes rabs, ge  5a5 - Tib: Sa dbaṇ bzaṇ po and Blo gros rgyal po, Tg, skyes rabs, ge 6a6";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:19%;'><div class='English'><span id='2159368bi' class='verse'>
+							112. At this time the Rishi, turning to the king with true words, said, ’It must be even as the king anticipates, he will surely arrive at perfect enlightenment.’&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "2159349";
+							kilderef = "Buddhac. Eng: Beal (1883)  - Eng: Beal (1883) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:19%;'><div class='English'><span id='1112686bi' class='verse'>
+							85. Then the sage Asita, having made known the real fate which awaited the prince to the king who was thus disturbed about his son, departed by the way of the wind as he had come, his figure watched reverentially in his flight.&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "1112667";
+							kilderef = "Buddhac. Eng: Cowell (1893, 1927)  - Eng: Cowell (1893, 1927) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'></div><div class='textvar' style='width:19%;'></div><div class='textvar' style='width:19%;'></div><div class='textvar' style='width:19%;'></div><div class='textvar' style='width:19%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=816d60d0-e7a7-102d-829a-001cc4df1abe</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

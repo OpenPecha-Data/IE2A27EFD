@@ -1,0 +1,547 @@
+id: IE2A27EFD
+source: https://www2.hf.uio.no/polyglotta/index.php?page=library&bid=2
+source_file: null
+initial_creation_type: input
+imported: '2022-05-27T20:36:24.538175'
+last_modified: '2022-05-27T20:36:24.538187'
+parser: null
+source_metadata:
+  title: 'Aśvaghoṣa: Buddhacarita'
+  language: sa
+  base:
+    fCFD7:
+      title: Title
+      base_file: fCFD7.txt
+      order: 1
+    f7081:
+      title: Preface
+      base_file: f7081.txt
+      order: 2
+    fF00C:
+      title: CI_Verses 1-20
+      base_file: fF00C.txt
+      order: 3
+    f4E9C:
+      title: CI_Verses 21-40
+      base_file: f4E9C.txt
+      order: 4
+    fDBDA:
+      title: CI_Verses 41-60
+      base_file: fDBDA.txt
+      order: 5
+    f4A2C:
+      title: CI_Verses 61-80
+      base_file: f4A2C.txt
+      order: 6
+    fFA5F:
+      title: CI_Verses 81-89
+      base_file: fFA5F.txt
+      order: 7
+    fF604:
+      title: CII_Verses 1-20
+      base_file: fF604.txt
+      order: 8
+    f38A4:
+      title: CII_Verses 21-40
+      base_file: f38A4.txt
+      order: 9
+    fA035:
+      title: CII_Verses 41-56
+      base_file: fA035.txt
+      order: 10
+    f32D9:
+      title: CIII_Verses 1-20
+      base_file: f32D9.txt
+      order: 11
+    f0A9F:
+      title: CIII_Verses 21-40
+      base_file: f0A9F.txt
+      order: 12
+    f5A13:
+      title: CIII_Verses 41-60
+      base_file: f5A13.txt
+      order: 13
+    f63CC:
+      title: CIII_Verses 61-65
+      base_file: f63CC.txt
+      order: 14
+    fB2F2:
+      title: CIV_Verses 1-20
+      base_file: fB2F2.txt
+      order: 15
+    f92D2:
+      title: CIV_Verses 21-40
+      base_file: f92D2.txt
+      order: 16
+    fAFAF:
+      title: CIV_Verses 41-60
+      base_file: fAFAF.txt
+      order: 17
+    f8546:
+      title: CIV_Verses 61-80
+      base_file: f8546.txt
+      order: 18
+    fB8BE:
+      title: CIV_Verses 81-100
+      base_file: fB8BE.txt
+      order: 19
+    f34AF:
+      title: CIV_Verses 101-103
+      base_file: f34AF.txt
+      order: 20
+    f0FAB:
+      title: CV_Verses 1-20
+      base_file: f0FAB.txt
+      order: 21
+    f9889:
+      title: CV_Verses 21-40
+      base_file: f9889.txt
+      order: 22
+    f48E7:
+      title: CV_Verses 41-60
+      base_file: f48E7.txt
+      order: 23
+    fF4D8:
+      title: CV_Verses 61-80
+      base_file: fF4D8.txt
+      order: 24
+    fD15C:
+      title: CV_Verses 81-87
+      base_file: fD15C.txt
+      order: 25
+    f969B:
+      title: CVI_Verses 1-20
+      base_file: f969B.txt
+      order: 26
+    f28C2:
+      title: CVI_Verses 21-40
+      base_file: f28C2.txt
+      order: 27
+    fB815:
+      title: CVI_Verses 41-60
+      base_file: fB815.txt
+      order: 28
+    f2B1B:
+      title: CVI_Verses 61-68
+      base_file: f2B1B.txt
+      order: 29
+    fCC9D:
+      title: CVII_Verses 1-20
+      base_file: fCC9D.txt
+      order: 30
+    f9446:
+      title: CVII_Verses 21-40
+      base_file: f9446.txt
+      order: 31
+    fBBA2:
+      title: CVII_Verses 41-58
+      base_file: fBBA2.txt
+      order: 32
+    fD652:
+      title: CVIII_Verses 1-20
+      base_file: fD652.txt
+      order: 33
+    f93FA:
+      title: CVIII_Verses 21-40
+      base_file: f93FA.txt
+      order: 34
+    fF21D:
+      title: CVIII_Verses 41-60
+      base_file: fF21D.txt
+      order: 35
+    fE806:
+      title: CVIII_Verses 61-80
+      base_file: fE806.txt
+      order: 36
+    f0E46:
+      title: CVIII_Verses 81-87
+      base_file: f0E46.txt
+      order: 37
+    fFB8C:
+      title: CIX_Verses 1-20
+      base_file: fFB8C.txt
+      order: 38
+    fC2E7:
+      title: CIX_Verses 21-40
+      base_file: fC2E7.txt
+      order: 39
+    f503A:
+      title: CIX_Verses 41-60
+      base_file: f503A.txt
+      order: 40
+    fC550:
+      title: CIX_Verses 61-80
+      base_file: fC550.txt
+      order: 41
+    f107B:
+      title: CIX_Verses 81-82
+      base_file: f107B.txt
+      order: 42
+    f9D20:
+      title: CX_Verses 1-20
+      base_file: f9D20.txt
+      order: 43
+    f03C7:
+      title: CX_Verses 21-40
+      base_file: f03C7.txt
+      order: 44
+    f5D04:
+      title: CX_Verse 41
+      base_file: f5D04.txt
+      order: 45
+    fCAC7:
+      title: CXI_Verses 1-20
+      base_file: fCAC7.txt
+      order: 46
+    f8218:
+      title: CXI_Verses 21-40
+      base_file: f8218.txt
+      order: 47
+    fFFC5:
+      title: CXI_Verses 41-60
+      base_file: fFFC5.txt
+      order: 48
+    f7F3F:
+      title: CXI_Verses 61-73
+      base_file: f7F3F.txt
+      order: 49
+    f9178:
+      title: CXII_Verses 1-20
+      base_file: f9178.txt
+      order: 50
+    fE594:
+      title: CXII_Verses 21-40
+      base_file: fE594.txt
+      order: 51
+    f17B3:
+      title: CXII_Verses 41-60
+      base_file: f17B3.txt
+      order: 52
+    f5001:
+      title: CXII_Verses 61-80
+      base_file: f5001.txt
+      order: 53
+    f4C11:
+      title: CXII_Verses 81-100
+      base_file: f4C11.txt
+      order: 54
+    f5135:
+      title: CXII_Verses 101-120
+      base_file: f5135.txt
+      order: 55
+    fD34A:
+      title: CXII_Verse 121
+      base_file: fD34A.txt
+      order: 56
+    f3CF1:
+      title: CXIII_Verses 1-20
+      base_file: f3CF1.txt
+      order: 57
+    fAE4C:
+      title: CXIII_Verses 21-40
+      base_file: fAE4C.txt
+      order: 58
+    f4A25:
+      title: CXIII_Verses 41-60
+      base_file: f4A25.txt
+      order: 59
+    f4CE9:
+      title: CXIII_Verses 61-73
+      base_file: f4CE9.txt
+      order: 60
+    fDBED:
+      title: CXIV_Verses 1-20
+      base_file: fDBED.txt
+      order: 61
+    f59C9:
+      title: CXIV_Verses 21-40
+      base_file: f59C9.txt
+      order: 62
+    f1E2A:
+      title: CXIV_Verses 21-40
+      base_file: f1E2A.txt
+      order: 63
+    fAA0C:
+      title: CXIV_Verses 41-60
+      base_file: fAA0C.txt
+      order: 64
+    f959C:
+      title: CXIV_Verses 61-80
+      base_file: f959C.txt
+      order: 65
+    f5D2D:
+      title: CXIV_Verses 81-100
+      base_file: f5D2D.txt
+      order: 66
+    f25BB:
+      title: CXIV_Verses 101-107
+      base_file: f25BB.txt
+      order: 67
+    f5655:
+      title: CXV_Verses 1-20
+      base_file: f5655.txt
+      order: 68
+    fCEC2:
+      title: CXV_Verses 21-40
+      base_file: fCEC2.txt
+      order: 69
+    f28CE:
+      title: CXV_Verses 41-58
+      base_file: f28CE.txt
+      order: 70
+    f0971:
+      title: CXVI_Verses 1-20
+      base_file: f0971.txt
+      order: 71
+    fEB88:
+      title: CXVI_Verses 21-40
+      base_file: fEB88.txt
+      order: 72
+    fE9AA:
+      title: CXVI_Verses 41-60
+      base_file: fE9AA.txt
+      order: 73
+    f1449:
+      title: CXVI_Verses 61-80
+      base_file: f1449.txt
+      order: 74
+    fB8AE:
+      title: CXVI_Verses 81-95
+      base_file: fB8AE.txt
+      order: 75
+    f3245:
+      title: CXVII_Verses 1-20
+      base_file: f3245.txt
+      order: 76
+    f5B5A:
+      title: CXVII_Verses 21-40
+      base_file: f5B5A.txt
+      order: 77
+    fB9AA:
+      title: CXVII_Verse 41
+      base_file: fB9AA.txt
+      order: 78
+    f1B1C:
+      title: CXVIII_Verses 1-20
+      base_file: f1B1C.txt
+      order: 79
+    fA6EC:
+      title: CXVIII_Verses 21-40
+      base_file: fA6EC.txt
+      order: 80
+    fB3E7:
+      title: CXVIII_Verses 41-60
+      base_file: fB3E7.txt
+      order: 81
+    fCD08:
+      title: CXVIII_Verses 61-80
+      base_file: fCD08.txt
+      order: 82
+    fBB74:
+      title: CXVIII_Verses 81-87
+      base_file: fBB74.txt
+      order: 83
+    fD2F7:
+      title: CXIX_Verses 1-20
+      base_file: fD2F7.txt
+      order: 84
+    fB946:
+      title: CXIX_Verses 21-40
+      base_file: fB946.txt
+      order: 85
+    f90BB:
+      title: CXIX_Verses 41-56
+      base_file: f90BB.txt
+      order: 86
+    f03FB:
+      title: CXX_Verses 1-20
+      base_file: f03FB.txt
+      order: 87
+    f17FB:
+      title: CXX_Verses 21-40
+      base_file: f17FB.txt
+      order: 88
+    f76AC:
+      title: CXX_Verses 41-58
+      base_file: f76AC.txt
+      order: 89
+    f1BCC:
+      title: CXXI_Verses 1-20
+      base_file: f1BCC.txt
+      order: 90
+    fE2A1:
+      title: CXXI_Verses 21-40
+      base_file: fE2A1.txt
+      order: 91
+    f1E12:
+      title: CXXI_Verses 41-60
+      base_file: f1E12.txt
+      order: 92
+    f4454:
+      title: CXXI_Verses 61-65
+      base_file: f4454.txt
+      order: 93
+    f6117:
+      title: CXXII_Verses 1-20
+      base_file: f6117.txt
+      order: 94
+    f5D95:
+      title: CXXII_Verses 21-40
+      base_file: f5D95.txt
+      order: 95
+    f7D3C:
+      title: CXXII_Verses 41-55
+      base_file: f7D3C.txt
+      order: 96
+    f8310:
+      title: CXXIII_Verses 1-20
+      base_file: f8310.txt
+      order: 97
+    f00C3:
+      title: CXXIII_Verses 21-40
+      base_file: f00C3.txt
+      order: 98
+    f8E9E:
+      title: CXXIII_Verses 41-60
+      base_file: f8E9E.txt
+      order: 99
+    fCE32:
+      title: CXXIII_Verses 61-94
+      base_file: fCE32.txt
+      order: 100
+    f4546:
+      title: CXXIV_Verses 1-20
+      base_file: f4546.txt
+      order: 101
+    f8DC9:
+      title: CXXIV_Verses 21-40
+      base_file: f8DC9.txt
+      order: 102
+    f2185:
+      title: CXXIV_Verses 41-60
+      base_file: f2185.txt
+      order: 103
+    f82CF:
+      title: CXXIV_Verses 61-64
+      base_file: f82CF.txt
+      order: 104
+    fEEE4:
+      title: CXXV_Verses 1-20
+      base_file: fEEE4.txt
+      order: 105
+    fF53B:
+      title: CXXV_Verses 21-40
+      base_file: fF53B.txt
+      order: 106
+    f3DAF:
+      title: CXXV_Verses 41-60
+      base_file: f3DAF.txt
+      order: 107
+    f741B:
+      title: CXXV_Verses 61-80
+      base_file: f741B.txt
+      order: 108
+    f8FA7:
+      title: CXXV_Verse 81
+      base_file: f8FA7.txt
+      order: 109
+    fABA2:
+      title: CXXVI_Verses 1-20
+      base_file: fABA2.txt
+      order: 110
+    fC331:
+      title: CXXVI_Verses 21-40
+      base_file: fC331.txt
+      order: 111
+    f965E:
+      title: CXXVI_Verses 41-60
+      base_file: f965E.txt
+      order: 112
+    f4C1F:
+      title: CXXVI_Verses 61-80
+      base_file: f4C1F.txt
+      order: 113
+    f0666:
+      title: CXXVI_Verses 81-100
+      base_file: f0666.txt
+      order: 114
+    f6BB8:
+      title: CXXVI_Verses 101-106
+      base_file: f6BB8.txt
+      order: 115
+    f8D5F:
+      title: CXXVII_Verses 1-20
+      base_file: f8D5F.txt
+      order: 116
+    f4D78:
+      title: CXXVII_Verses 21-40
+      base_file: f4D78.txt
+      order: 117
+    fF436:
+      title: CXXVII_Verses 41-60
+      base_file: fF436.txt
+      order: 118
+    f9A56:
+      title: CXXVII_Verses 61-80
+      base_file: f9A56.txt
+      order: 119
+    fD297:
+      title: CXXVII_Verses 81-84
+      base_file: fD297.txt
+      order: 120
+    f1E74:
+      title: CXXVIII_Verses 1-20
+      base_file: f1E74.txt
+      order: 121
+    fEC84:
+      title: CXXVIII_Verses 21-40
+      base_file: fEC84.txt
+      order: 122
+    f0C15:
+      title: CXXVIII_Verses 41-60
+      base_file: f0C15.txt
+      order: 123
+    f02D6:
+      title: CXXVIII_Verses 61-75
+      base_file: f02D6.txt
+      order: 124
+    f5CB7:
+      title: Colophon
+      base_file: f5CB7.txt
+      order: 125
+  chapter_to_tile:
+    CI: 'Chapter 1: Bhagavatprasūti'
+    CII: 'Chapter 2: Antaḥpuravihāra'
+    CIII: 'Chapter 3: Saṃvegotpatti'
+    CIV: 'Chapter 4: Strīvighātana'
+    CV: 'Chapter 5: Abhiniṣkramaṇa'
+    CVI: 'Chapter 6: Chandakanivartana'
+    CVII: 'Chapter 7: Tapovanapraveśa'
+    CVIII: 'Chapter 8: Antaḥpuravilāpa'
+    CIX: 'Chapter 9: Kumārānveṣaṇa'
+    CX: 'Chapter 10: Śreṇyābhigamana'
+    CXI: 'Chapter 11: Kāmavigarhaṇa'
+    CXII: 'Chapter 12: Arāḍadarśana'
+    CXIII: 'Chapter 13: Māravijaya'
+    CXIV: 'Chapter 14: Englightenment'
+    CXV: 'Chapter 15: Turning the Wheel of the Law'
+    CXVI: 'Chapter 16: Many Conversions'
+    CXVII: 'Chapter 17: Conversion (pravrajyā) of the Great Disciples'
+    CXVIII: 'Chapter 18: The Instruction of Anāthapiṇḍada'
+    CXIX: 'Chapter 19: The Meeting of Father and Son'
+    CXX: 'Chapter 20: Acceptance of Jetavana'
+    CXXI: 'Chapter 21: Progress (srotas) of the Mission'
+    CXXII: 'Chapter 22: The Visit to Amrapāli''s Grove'
+    CXXIII: 'Chapter 23: Fixing the Factors of Bodily Life'
+    CXXIV: 'Chapter 24: Compassion for the Licchavis'
+    CXXV: 'Chapter 25: The Journey to Nirvāṇa'
+    CXXVI: 'Chapter 26: The Mahāparinirvāṇa'
+    CXXVII: 'Chapter 27: Eulogy of Nirvāṇa'
+    CXXVIII: 'Chapter 28: The Division of the Relics'
+statistics: {}
+quality: {}
+copyright:
+  status: Unknown
+  notice: ''
+  info_url: null
+license: null
